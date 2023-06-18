@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<head>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Admin Page | The Wisdom Lab</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script scr="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+<style>
+    
+      .button1 {
+        background-color: #008080;
+        border: none;
+        color: white;
+        padding: 20px 34px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        border-radius: 12px;
+      }
+    </style>
+
+</head>
+<body style="background-color: BlanchedAlmond;">
+<h1 align="center">Welcome Administrator</h1>
+
+<p style="text-align:center">The Wisdom Lab aims to enrich the lives of your children, the future of Singapore.</p>
+
+<form method="post" action ="setclass">
+
+<p>
+<h3>Class details</h3>
+<input type="text" name="className" placeholder="Class Name"><br>
+<input type="text" name="teacher" placeholder="Teacher Name"><br>
+<input type="text" name="tuitionFeeMonthly" placeholder="Monthly Fee"><br>
+</p>
+
+<p>
+<input type="submit" value="Set Class"><br>
+</p>
+</form>
+
+<span style="color: red;text-align: center" th:if="${errora}">Class exists already</span>
+
+<form method="post" action ="setgrade">
+
+<p>
+<h3>Student Grading</h3>
+<input type="text" name="studentId" placeholder="Student Id"><br>
+<input type="text" name="tuitionId" placeholder="Tuition Id"><br>
+<input type="text" name="month" placeholder="Month"><br>
+<input type="text" name="score" placeholder="Score"><br>
+</p>
+
+<p>
+<input type="submit" value="Set Grade"><br>
+</p>
+</form>
+
+<p>
+<a href="/logout" class="button1"><h1>LOGOUT</h1></a>
+</p>
+
+</body>
+</html>

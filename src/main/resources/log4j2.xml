@@ -1,0 +1,27 @@
+<Configuration status="warn" monitorInterval="5">
+	
+	<Appenders>
+		<Console name = "StdOut" target = "SYSTEM_OUT">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+		</Console>
+		<File name = "FileAppender" filename="./src/main/resources/out.log">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+		</File>
+	</Appenders>
+	
+	<Loggers>
+		<!-- Since the root logger is appending to the console, all other loggers 
+			will inherit this appender. Thus, all loggers will append to the console. -->
+		<Root level="info">
+			<AppenderRef ref="StdOut" />
+		</Root>
+
+		<!-- Sometimes it makes more sense to configure logging for all classes 
+			within a package. Because parent loggers are dot-separated, a child logger 
+			will inherit all information from its most direct ancestor. -->
+		<Logger name="com.fdmgroup.TuitionProjectSpring" level="trace">
+			<AppenderRef ref="FileAppender" />
+		</Logger>
+	</Loggers>
+	
+</Configuration>
