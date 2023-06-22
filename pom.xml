@@ -81,11 +81,6 @@
 			
 		</dependency>
 		<dependency>
-			<groupId>com.fdmgroup</groupId>
-			<artifactId>BookStoreExercise</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
       <groupId>org.thymeleaf.extras</groupId>
       <artifactId>thymeleaf-extras-springsecurity6</artifactId>
     </dependency>
